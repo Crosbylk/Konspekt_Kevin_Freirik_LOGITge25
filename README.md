@@ -1,0 +1,2 @@
+# Konspekt_Kevin_Freirik_LOGITge25
+Programeerimiste aluste konspekt
