@@ -46,7 +46,17 @@ namespace K_Freirik_LOGITge25
             {
                 Console.WriteLine("Alaealisi sisse ei lasta, mine vembutembumaale või saa endale võltsdokument");
             }
+            /*
+             * näiteprogram 3:
+             
+            klient tahab et programm teeks:
+            -küsib kasutajalt tema kasutajaNime
+            -küsib kasutajalt tema parooli
+            -logib kasutaja sisse kui mõlemad on õiged
+            */
+            //hint : mida teeb &&?
 
+            /* siia käib vooskeemi järgi kirjutatud kood näidisülesanne 3 kohta */
 
 
 
