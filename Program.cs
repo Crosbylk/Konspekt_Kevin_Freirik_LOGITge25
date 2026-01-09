@@ -1,4 +1,5 @@
-﻿using System.Net.NetworkInformation;
+﻿using System.ComponentModel.Design;
+using System.Net.NetworkInformation;
 
 namespace EsimeneProjekt_LOGITge25_KF
 {
@@ -159,31 +160,105 @@ namespace EsimeneProjekt_LOGITge25_KF
             // ehk teisisõnu: true = false / false = true
 
 
+            /* -= T I N G I M U S   L A U S E */
+            if (true)  // Kaitstud sõna "if" kutsub esile tingimuslause, mille tingimuse avaldis on sellele järgnevate () sulgude vahel.
+            { // Järgneb {} loogeliste sulgude vahel koodiplokk, mis teostatakse siis, kui tingimuse avaldis annab tuleusena "true",
+              // "false" tulemuse puhul jäetakse kood vahele.
 
-            /* näiteülesanne 5 */
-            Console.WriteLine("Kui kaugele oli su viimane kuulitõuge? sisesta meetrites");
-            float kaugus = float.Parse(Console.ReadLine());
-            if (kaugus <= 1.00 && kaugus >= 0.00 )
-            {
-                Console.WriteLine("Sa suudad kindlasti rohkem, topis");
             }
-            else if (kaugus<= 2.00 || kaugus >= 1.01)
+
+            else if (true) // Kaitstudsõna "else" ja "if " (koos "else if") kutsuvad esile sekundaar tingimuslause, mille tingimus on samamoodi
+                           // Sellele järgnevate sulgude vahel, ning millele peab alati eelnema kas "if" või teine "else if". Else if tingimust 
+                           // Kontrollitakse ainult siis, kui sellele eelnev tingimus tagastab avaldise tulemusena "false".
+                           // Järgneb {} loogeliste sulgude vahel koodiplokk, mis teostatakse siis, kui tingimuse avaldis annab tuleusena "true",
+                           // "false" tulemuse puhul jäetakse kood vahele ning minnakse edasi järgneva tingimuse või teostatava koodi juurde.
+
+                else   // Kaitstud sõna "else" kutsub esile järeltingimuslause, millele peab eelnema alati kas "if" või " else if" tingimuslause, ning
+                    // mille koodiplokki sisu täidetakse ilma oma tingimuse avaldise kontrollita (ei oma avaldist) kuna else koodiplokk teostatakse 
+                    // kõikide teiste tingimuste läbikukkumisel (kõik eelnevad tagastavad tulemusena "false").
+
+
+
+
+
+
+
+
+                        ///* näiteülesanne 5 */
+                        //Console.WriteLine("Kui kaugele oli su viimane kuulitõuge? sisesta meetrites");
+                        //float kaugus = float.Parse(Console.ReadLine());
+                        //if (kaugus <= 1.00 && kaugus >= 0.00 )
+                        //{
+                        //    Console.WriteLine("Sa suudad kindlasti rohkem, topis");
+                        //}
+                        //else if (kaugus<= 2.00 || kaugus >= 1.01)
+                        //{
+                        //    Console.WriteLine("Anna hagu juurde!");
+                        //}
+                        //else if (kaugus<= 3.00 && kaugus >= 2.01)
+                        //{
+                        //    Console.WriteLine("Normlana, kolm meetrit umbes");
+                        //}
+                        //else if (kaugus < 0)
+                        //{
+                        //    Console.WriteLine("Miks tagurpidi viskad? Loll oled vä??");
+                        //} 
+                        //else
+                        //{
+                        //    Console.WriteLine("Ossaraks, seda on arsti juba orbiidilt näha");
+                        //}
+
+                        /* näiteülesanne 6*/
+
+                        Console.WriteLine("Palun sisesta oma vanus, kirjuta täisarvuna: ");
+            int isikuVanus = 0;
+            isikuVanus = int.Parse(Console.ReadLine());
+            if (isikuVanus <= 0)
             {
-                Console.WriteLine("Anna hagu juurde!");
+                Console.WriteLine("Ajarändureid me ei teeninda");
+
+
+
             }
-            else if (kaugus<= 3.00 && kaugus >= 2.01)
+            else if (isikuVanus > 0 && isikuVanus < 18)
             {
-                Console.WriteLine("Normlana, kolm meetrit umbes");
+                Console.WriteLine("Palun sisesta oma nimi: ");
+                string kasutajaNimi = "";
+                kasutajaNimi = Console.ReadLine();
+                Console.WriteLine($"Kallis {kasutajaNimi}, palun kutsu siia oma ilus emme. ");
+
             }
-            else if (kaugus < 0)
-            {
-                Console.WriteLine("Miks tagurpidi viskad? Loll oled vä??");
-            } 
             else
             {
-                Console.WriteLine("Ossaraks, seda on arsti juba orbiidilt näha");
-            }
-        }
+                Console.WriteLine("Palun kirjuta siia oma Eesnimi");
+                string eesNimi = "";
+                eesNimi = Console.ReadLine();
+                Console.WriteLine("Palun kirjuta siia oma Perekonnanimi");
+                string perekonnaNimi = "";
+                perekonnaNimi = Console.ReadLine();
+                if (eesNimi == "" || perekonnaNimi == "")
+                {
+                    Console.WriteLine("Sisestama pidi mõlemad nimed jobu!");
+                }
+                else
+                {
+                    Console.WriteLine($"Tere lõunat {eesNimi} {perekonnaNimi} ! ");
+                }
 
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+        }
+        
     }
 }
